@@ -4,6 +4,8 @@ import Navbar from "@/components/layout/Navbar"
 import Footer from "@/components/layout/Footer"
 import ScrollToTop from "@/components/ui/ScrollToTop"
 import JsonLd from "@/components/ui/JsonLd"
+import ThemeProvider from "@/components/ui/ThemeProvider"
+import ThemeToggle from "@/components/ui/ThemeToggle"
 import "./globals.css"
 
 const syne = Syne({
@@ -68,11 +70,14 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${syne.variable} ${spaceMono.variable}`}>
       <body className="min-h-screen flex flex-col font-sans antialiased">
-        <JsonLd />
-        <Navbar />
-        <main className="flex-1 relative z-10">{children}</main>
-        <Footer />
-        <ScrollToTop />
+        <ThemeProvider>
+          <JsonLd />
+          <Navbar />
+          <main className="flex-1 relative z-10">{children}</main>
+          <Footer />
+          <ScrollToTop />
+          <ThemeToggle />
+        </ThemeProvider>
       </body>
     </html>
   )
