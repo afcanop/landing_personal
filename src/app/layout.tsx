@@ -1,12 +1,17 @@
 import type { Metadata } from "next"
-import { Syne, Space_Mono } from "next/font/google"
+import { Syne, Space_Mono, Inter } from "next/font/google"
 import Navbar from "@/components/layout/Navbar"
 import Footer from "@/components/layout/Footer"
-import ScrollToTop from "@/components/ui/ScrollToTop"
 import JsonLd from "@/components/ui/JsonLd"
 import ThemeProvider from "@/components/ui/ThemeProvider"
 import ThemeToggle from "@/components/ui/ThemeToggle"
 import "./globals.css"
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+})
 
 const syne = Syne({
   subsets: ["latin"],
@@ -68,14 +73,13 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es" className={`${syne.variable} ${spaceMono.variable}`}>
+    <html lang="es" className={`${inter.variable} ${syne.variable} ${spaceMono.variable}`}>
       <body className="min-h-screen flex flex-col font-sans antialiased">
         <ThemeProvider>
           <JsonLd />
           <Navbar />
-          <main className="flex-1 relative z-10">{children}</main>
+          <main className="flex-1">{children}</main>
           <Footer />
-          <ScrollToTop />
           <ThemeToggle />
         </ThemeProvider>
       </body>

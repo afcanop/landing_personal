@@ -5,20 +5,18 @@ import FadeIn from "@/components/ui/FadeIn"
 
 export default function Education() {
   return (
-    <section id="education" className="py-20 px-8 max-w-7xl mx-auto border-t border-neon-cyan/10">
+    <section id="education" className="py-24 px-8 max-w-7xl mx-auto">
       <FadeIn>
-        <div className="mb-16">
-          <h2 className="text-4xl sm:text-5xl font-extrabold mb-4 tracking-tighter">
-            Formación <span className="bg-gradient-to-r from-neon-cyan to-neon-magenta bg-clip-text text-transparent">Académica</span>
-          </h2>
-        </div>
+        <h2 className="text-3xl sm:text-4xl font-display font-extrabold mb-12 tracking-tighter text-text-primary">
+          Formación Académica
+        </h2>
       </FadeIn>
-      <div className="grid gap-8">
-        {education.map((edu, i) => (
+      <div className="grid gap-6">
+        {education.map((edu) => (
           <FadeIn key={`${edu.institution}-${edu.title}`}>
-            <div className="p-8 bg-neon-cyan/5 border border-neon-cyan/15 rounded-xl transition-all duration-300 hover:bg-neon-cyan/10 hover:border-neon-cyan/30 hover:translate-x-2">
-              <h3 className="text-xl font-bold text-text-primary mb-2">{edu.title}</h3>
-              <p className="text-base text-neon-cyan font-bold mb-2">{edu.institution}</p>
+            <div className="p-6 border-l-2 border-accent/30 pl-6 transition-all duration-300 hover:border-accent">
+              <h3 className="text-lg font-bold text-text-primary mb-1">{edu.title}</h3>
+              <p className="text-base text-accent font-semibold mb-1">{edu.institution}</p>
               <p className="text-sm text-text-tertiary">{edu.period} | {edu.location}</p>
             </div>
           </FadeIn>
