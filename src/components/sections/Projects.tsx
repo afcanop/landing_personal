@@ -13,10 +13,18 @@ export default function Projects() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {projects.map((project) => (
           <FadeIn key={project.title}>
-            <div className="h-full p-6 border border-accent/10 rounded-xl transition-all duration-300 hover:border-accent/30 hover:-translate-y-1">
+            <div className="relative h-full p-6 border border-accent/10 rounded-xl transition-all duration-300 hover:border-accent/30 hover:-translate-y-1">
               <p className="text-xs font-mono uppercase tracking-widest text-text-tertiary mb-3">{project.category}</p>
               <p className="text-2xl font-display font-extrabold text-accent mb-1">{project.metric}</p>
-              <h3 className="font-bold text-text-primary mb-1">{project.title}</h3>
+              <h3 className="font-bold text-text-primary mb-1">
+                {project.link ? (
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="no-underline hover:text-accent after:absolute after:inset-0">
+                    {project.title} ↗
+                  </a>
+                ) : (
+                  project.title
+                )}
+              </h3>
               <p className="text-sm text-text-secondary mb-4">{project.description}</p>
               <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs font-mono text-text-tertiary">
                 {project.tech.map((t) => (

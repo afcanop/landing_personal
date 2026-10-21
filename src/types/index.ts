@@ -16,6 +16,7 @@ export interface Project {
   description: string
   metric: string
   tech: string[]
+  link?: string
 }
 
 export interface Stat {

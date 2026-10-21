@@ -29,6 +29,7 @@ const icons: Record<string, string> = {
   DigitalOcean: "digitalocean/digitalocean-original",
   Git: "git/git-original",
   Linux: "linux/linux-original",
+  Bash: "bash/bash-original",
 }
 
 export default function Skills() {

@@ -2,6 +2,14 @@ import type { Project } from "@/types"
 
 export const projects: Project[] = [
   {
+    category: "Automatización",
+    title: "Neuronix",
+    description: "Automatización inteligente para empresas.",
+    metric: "Sitio en producción",
+    tech: ["Automatización", "Web"],
+    link: "https://neuronix.com.co/",
+  },
+  {
     category: "Modernización",
     title: "Optimización Angular",
     description: "Actualización de plataforma web empresarial.",

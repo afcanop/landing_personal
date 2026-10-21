@@ -11,7 +11,7 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     title: "Datos & DevOps",
-    skills: ["MySQL", "PostgreSQL", "MariaDB", "MongoDB", "SQL Server", "Docker", "DigitalOcean", "Git", "Linux"],
+    skills: ["MySQL", "PostgreSQL", "MariaDB", "MongoDB", "SQL Server", "Docker", "DigitalOcean", "Git", "Linux", "Bash"],
   },
   {
     title: "Cómo trabajo",
