@@ -2,51 +2,45 @@ import type { Project } from "@/types"
 
 export const projects: Project[] = [
   {
-    category: "MODERNIZACIÓN",
+    category: "Modernización",
     title: "Optimización Angular",
-    description:
-      "Modernización y optimización de plataforma web, mejorando rendimiento del 25% y reduciendo bugs en 35%.",
-    tech: ["Angular", "TypeScript", "PHP", "MySQL"],
-    link: "#",
+    description: "Actualización de plataforma web empresarial.",
+    metric: "+25% rendimiento",
+    tech: ["Angular", "TypeScript", "PHP"],
   },
   {
-    category: "REFACTORIZACIÓN",
+    category: "Refactorización",
     title: "Migración a ORM",
-    description:
-      "Migración de consultas SQL a ORM, mejorando seguridad y reduciendo tiempos de respuesta en 40%.",
-    tech: ["Laravel", "Eloquent", "MySQL", "PHP"],
-    link: "#",
+    description: "De consultas SQL a Eloquent, más seguro y rápido.",
+    metric: "−40% tiempo de consulta",
+    tech: ["Laravel", "Eloquent", "MySQL"],
   },
   {
-    category: "AUTOMATIZACIÓN",
+    category: "Automatización",
     title: "Scripts Python",
-    description:
-      "Soluciones de automatización de procesos repetitivos con aumento de eficiencia operativa del 60%.",
-    tech: ["Python", "Scripting", "GitHub", "Linux"],
-    link: "#",
+    description: "Automatización de tareas operativas repetitivas.",
+    metric: "+60% eficiencia",
+    tech: ["Python", "GitHub", "Linux"],
   },
   {
-    category: "MANTENIMIENTO",
-    title: "Multi-Proyecto Support",
-    description:
-      "Mantenimiento y mejora de 5+ aplicaciones web, garantizando estabilidad y optimizando rendimiento.",
-    tech: ["Full-Stack", "Debugging", "Code Review", "Testing"],
-    link: "#",
+    category: "Mantenimiento",
+    title: "Soporte multi-proyecto",
+    description: "Evolución y estabilidad de apps en producción.",
+    metric: "5+ apps en producción",
+    tech: ["Full-Stack", "Code Review", "Testing"],
   },
   {
-    category: "DESARROLLO",
-    title: "Módulos Web",
-    description:
-      "Desarrollo de componentes responsive utilizando Laravel, JavaScript y estándares modernos.",
-    tech: ["PHP", "Laravel", "JavaScript", "Bootstrap"],
-    link: "#",
+    category: "Desarrollo",
+    title: "Módulos web",
+    description: "Componentes responsive con estándares modernos.",
+    metric: "Laravel + JS",
+    tech: ["PHP", "Laravel", "Bootstrap"],
   },
   {
-    category: "INTEGRACIÓN",
-    title: "Web Scraping",
-    description:
-      "Soluciones de scraping web e integración de datos desde múltiples fuentes.",
-    tech: ["Python", "Scraping", "APIs", "Automatización"],
-    link: "#",
+    category: "Integración",
+    title: "Web scraping",
+    description: "Extracción e integración de datos de varias fuentes.",
+    metric: "Datos automatizados",
+    tech: ["Python", "Scraping", "APIs"],
   },
 ]

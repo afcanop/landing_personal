@@ -4,9 +4,8 @@ import { useState, useEffect } from "react"
 
 const navLinks = [
   { href: "#about", label: "Sobre mí" },
-  { href: "#education", label: "Formación" },
   { href: "#experience", label: "Experiencia" },
-  { href: "#skills", label: "Skills" },
+  { href: "#skills", label: "Stack" },
   { href: "#projects", label: "Proyectos" },
   { href: "#contact", label: "Contacto" },
 ]
@@ -64,7 +63,7 @@ export default function Navbar() {
           : "bg-transparent border-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 py-4 flex justify-between items-center">
         <a
           href="#home"
           onClick={(e) => handleClick(e, "#home")}
@@ -108,7 +107,7 @@ export default function Navbar() {
           open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
-        <ul className="flex flex-col items-center justify-center h-full gap-10 list-none">
+        <ul className="flex flex-col items-center justify-center h-full gap-8 list-none">
           {navLinks.map(({ href, label }) => (
             <li key={href}>
               <a

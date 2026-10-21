@@ -2,8 +2,6 @@ export interface Experience {
   title: string
   company: string
   period: string
-  location: string
-  description: string
   achievements: string[]
 }
 
@@ -16,8 +14,8 @@ export interface Project {
   category: string
   title: string
   description: string
+  metric: string
   tech: string[]
-  link: string
 }
 
 export interface Stat {

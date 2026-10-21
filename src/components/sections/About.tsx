@@ -1,30 +1,39 @@
 "use client"
 
-import { languages } from "@/data/languages"
+import { education } from "@/data/education"
 import FadeIn from "@/components/ui/FadeIn"
+import SectionTitle from "@/components/ui/SectionTitle"
+
+const highlights = [
+  { value: "8+ años", label: "desarrollando software empresarial" },
+  { value: "APIs", label: "REST, bases de datos SQL/NoSQL y automatización" },
+  { value: "Ágil", label: "equipos Scrum, code review y Clean Code" },
+]
 
 export default function About() {
   return (
-    <section id="about" className="py-24 px-8 max-w-7xl mx-auto">
+    <section id="about" className="py-16 sm:py-24 px-6 sm:px-8 max-w-7xl mx-auto">
       <FadeIn>
-        <h2 className="text-3xl sm:text-4xl font-display font-extrabold mb-6 tracking-tighter text-text-primary">
-          Sobre mí
-        </h2>
-        <p className="text-base sm:text-lg text-text-secondary leading-relaxed max-w-[900px] mb-8">
-          Ingeniero de Software Full Stack con más de 8 años de experiencia desarrollando
-          aplicaciones empresariales y escalables. Especializado en Angular, Python, Django,
-          PHP y Laravel. Experiencia en arquitectura de software, APIs REST, bases de datos
-          SQL/NoSQL, automatización de procesos y modernización de aplicaciones. Orientado a
-          la entrega de soluciones robustas, optimización del rendimiento y trabajo
-          colaborativo bajo metodologías ágiles.
-        </p>
-        <div className="flex flex-wrap items-center gap-6">
-          <h3 className="text-sm font-bold text-accent tracking-wider">IDIOMAS</h3>
-          {languages.map((lang) => (
-            <span key={lang.name} className="text-sm text-text-secondary">
-              {lang.name} <span className="text-accent font-semibold">({lang.level})</span>
-            </span>
+        <SectionTitle eyebrow="01 · Sobre mí">Código robusto, entregas claras</SectionTitle>
+        <div className="grid sm:grid-cols-3 gap-4 mb-10">
+          {highlights.map((h) => (
+            <div key={h.value} className="p-5 border border-accent/10 rounded-xl">
+              <div className="text-2xl font-display font-extrabold text-accent mb-1">{h.value}</div>
+              <p className="text-sm text-text-secondary">{h.label}</p>
+            </div>
           ))}
+        </div>
+        <div className="flex flex-wrap gap-x-10 gap-y-4 text-sm">
+          {education.map((edu) => (
+            <div key={edu.title}>
+              <p className="font-semibold text-text-primary">{edu.title}</p>
+              <p className="text-text-tertiary">{edu.institution} · {edu.period.slice(-4)}</p>
+            </div>
+          ))}
+          <div>
+            <p className="font-semibold text-text-primary">Español</p>
+            <p className="text-text-tertiary">Nativo</p>
+          </div>
         </div>
       </FadeIn>
     </section>

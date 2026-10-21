@@ -2,26 +2,56 @@
 
 import { skillCategories } from "@/data/skills"
 import FadeIn from "@/components/ui/FadeIn"
+import SectionTitle from "@/components/ui/SectionTitle"
+
+const ICON_BASE = "https://raw.githubusercontent.com/devicons/devicon/master/icons"
+
+const icons: Record<string, string> = {
+  Angular: "angular/angular-original",
+  TypeScript: "typescript/typescript-original",
+  RxJS: "rxjs/rxjs-original",
+  React: "react/react-original",
+  "React Native": "react/react-original",
+  JavaScript: "javascript/javascript-original",
+  Bootstrap: "bootstrap/bootstrap-original",
+  Python: "python/python-original",
+  Django: "django/django-plain",
+  FastAPI: "fastapi/fastapi-original",
+  PHP: "php/php-original",
+  Laravel: "laravel/laravel-original",
+  "Node.js": "nodejs/nodejs-original",
+  MySQL: "mysql/mysql-original",
+  PostgreSQL: "postgresql/postgresql-original",
+  MariaDB: "mariadb/mariadb-original",
+  MongoDB: "mongodb/mongodb-original",
+  "SQL Server": "microsoftsqlserver/microsoftsqlserver-plain",
+  Docker: "docker/docker-original",
+  DigitalOcean: "digitalocean/digitalocean-original",
+  Git: "git/git-original",
+  Linux: "linux/linux-original",
+}
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 px-8 max-w-7xl mx-auto">
+    <section id="skills" className="py-16 sm:py-24 px-6 sm:px-8 max-w-7xl mx-auto">
       <FadeIn>
-        <h2 className="text-3xl sm:text-4xl font-display font-extrabold mb-12 tracking-tighter text-text-primary">
-          Stack Técnico
-        </h2>
+        <SectionTitle eyebrow="03 · Stack">Con qué construyo</SectionTitle>
       </FadeIn>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {skillCategories.map((category) => (
           <FadeIn key={category.title}>
-            <div className="p-6 border border-accent/10 rounded-xl transition-all duration-300 hover:border-accent/30">
-              <h3 className="text-lg font-bold text-accent mb-4">{category.title}</h3>
+            <div className="p-6 border border-accent/10 rounded-xl h-full transition-colors hover:border-accent/30">
+              <h3 className="text-xs font-mono uppercase tracking-widest text-accent mb-4">{category.title}</h3>
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="border border-accent/20 text-accent/90 px-3 py-1.5 rounded text-xs font-semibold"
+                    className="bg-surface text-text-primary px-3 py-1.5 rounded-md text-sm inline-flex items-center gap-2"
                   >
+                    {icons[skill] && (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img src={`${ICON_BASE}/${icons[skill]}.svg`} alt="" width={16} height={16} loading="lazy" />
+                    )}
                     {skill}
                   </span>
                 ))}
