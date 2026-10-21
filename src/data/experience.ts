@@ -10,9 +10,17 @@ export const experiences: Experience[] = [
     ],
   },
   {
+    title: "Desarrollador Full Stack Freelance",
+    company: "Independiente",
+    period: "May – Oct 2026",
+    achievements: [
+      "Desarrollo de soluciones web y automatización para clientes",
+    ],
+  },
+  {
     title: "Asesor TICS y Backend",
     company: "Laboratorio Médico Echavarría",
-    period: "2026",
+    period: "Feb – May 2026",
     achievements: [
       "Automatización en Python: +60% de eficiencia operativa",
       "Migración del flujo de trabajo a GitHub con control de versiones",
