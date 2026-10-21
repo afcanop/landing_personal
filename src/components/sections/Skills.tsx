@@ -19,6 +19,7 @@ const icons: Record<string, string> = {
   FastAPI: "fastapi/fastapi-original",
   PHP: "php/php-original",
   Laravel: "laravel/laravel-original",
+  Symfony: "symfony/symfony-original",
   "Node.js": "nodejs/nodejs-original",
   MySQL: "mysql/mysql-original",
   PostgreSQL: "postgresql/postgresql-original",
@@ -47,11 +48,18 @@ export default function Skills() {
                 {category.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="bg-surface text-text-primary px-3 py-1.5 rounded-md text-sm inline-flex items-center gap-2"
+                    className="group bg-surface text-text-primary px-3 py-1.5 rounded-md text-sm inline-flex items-center gap-2 transition-all duration-200 ease-out cursor-default hover:-translate-y-0.5 hover:shadow-md hover:shadow-accent/20 hover:ring-1 hover:ring-accent/40 active:scale-95"
                   >
                     {icons[skill] && (
                       // eslint-disable-next-line @next/next/no-img-element
-                      <img src={`${ICON_BASE}/${icons[skill]}.svg`} alt="" width={16} height={16} loading="lazy" />
+                      <img
+                        src={`${ICON_BASE}/${icons[skill]}.svg`}
+                        alt=""
+                        width={16}
+                        height={16}
+                        loading="lazy"
+                        className="transition-transform duration-300 ease-out group-hover:scale-125 group-hover:rotate-12"
+                      />
                     )}
                     {skill}
                   </span>
